@@ -2,13 +2,13 @@ import org.jetbrains.annotations.Nullable;
 
 public class Name {
     private String firstName;
-    @Nullable
     private String middleName;
     private String lastName;
 
     private String credentials;
 
-    public Name(String firstName, String lastName,String credentials) {
+    public Name(String firstName,String middleName, String lastName,String credentials) {
+        this.middleName = middleName;
         this.credentials = credentials;
         this.firstName = firstName;
         this.lastName = lastName;

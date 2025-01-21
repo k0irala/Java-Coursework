@@ -9,8 +9,8 @@ public class ValCompetitor extends Name implements CompetitionLevel {
     private String country;
     private double overAllScore;
 
-    public ValCompetitor(int CompetitorId, String firstName, String lastName,String credentials) {
-        super(firstName, lastName,credentials);
+    public ValCompetitor(int CompetitorId, String firstName, String middleName,String lastName,String credentials) {
+        super(firstName,middleName,lastName,credentials);
         this.CompetitorId = CompetitorId;
     }
 
@@ -54,15 +54,18 @@ public class ValCompetitor extends Name implements CompetitionLevel {
     public double getOverAllScore(){
         return 5;
     }
+    public void setOverAllScore(double overAllScore) {
+        this.overAllScore = overAllScore;
+    }
     public String getFullDetails(){
         return "Competitor Number" + CompetitorId + ","
-                + "Name" + this.getFirstName() + " " + Name.getMiddleName() + " " +
-                Name.getLastName() + ","+ "Country" + country + ".\n"
+                + "Name " + this.getFirstName() + " " + this.getMiddleName() + " " +
+                this.getLastName() + ","+ "Country " + country + ".\n"
                 +Name.getFirstName() + " is a "
-                + "Level" + level + ","
-                + "aged" + age + ", and has a overall score of" + overAllScore;
+                + "Level " + level + ","
+                + "aged " + age + ", and has a overall score of " + overAllScore;
     }
     public String getShortDetails(){
-        return "CN "+ CompetitorId + "( " +Name.getCredentials()+") has a overall score "+ overAllScore;
+        return "CN "+ CompetitorId + "(" +Name.getCredentials()+") has a overall score "+ overAllScore;
     }
 }
