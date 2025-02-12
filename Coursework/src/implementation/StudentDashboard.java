@@ -3,8 +3,8 @@ package implementation;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.table.DefaultTableModel;
-
+import java.util.HashMap;
+import java.util.Map;
 import connections.IConnectionString;
 import enums.CompetitionLevel;
 import models.Competitor;
@@ -17,8 +17,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.util.HashSet;
-import java.util.Set;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -211,11 +209,10 @@ public class StudentDashboard extends JFrame {
                         + " with an overall score of:" + highestScore + "\n");
                 StatisticalSummaryTextArea.append("    Frequency of Individual Scores:\n");
 
-                ArrayList<Integer> scores = details.getScoreArray();
-                Set<Integer> uniqueScores = new HashSet<Integer>(scores);
-                for (int score : uniqueScores) {
-                    StatisticalSummaryTextArea
-                            .append("    Score: " + score + " occurs " + getFrequencyOfScore(score) + " times\n");
+                Map<Integer, Integer> scoreFrequencies = getOverallScoreFrequencies();
+                for (Map.Entry<Integer, Integer> entry : scoreFrequencies.entrySet()) {
+                    if(entry.getKey() == 0) continue;
+                    StatisticalSummaryTextArea.append("    Score: " + entry.getKey() + " occurs " + entry.getValue() + " times\n");
                 }
             }
         });
@@ -316,17 +313,30 @@ public class StudentDashboard extends JFrame {
         return highestScoreDetails;
     }
 
-    public int getFrequencyOfScore(int score) {
-        try {
-            Connection conn = IConnectionString.getConnection();
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("Select count(score1) from users where score1 = " + score);
-            if (rs.next()) {
-                return rs.getInt(1);
+    public Map<Integer, Integer> getOverallScoreFrequencies() {
+        String query = "SELECT score, COUNT(*) AS frequency FROM (" +
+                "SELECT score1 AS score FROM users " +
+                "UNION ALL " +
+                "SELECT score2 FROM users " +
+                "UNION ALL " +
+                "SELECT score3 FROM users" +
+                ") AS all_scores GROUP BY score ORDER BY frequency DESC";
+
+        Map<Integer, Integer> scoreFrequencies = new HashMap<>();
+
+        try (Connection conn = IConnectionString.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                scoreFrequencies.put(rs.getInt("score"), rs.getInt("frequency"));
             }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
-        return 0;
+
+        return scoreFrequencies;
     }
+
+
 }
