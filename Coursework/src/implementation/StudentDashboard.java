@@ -79,6 +79,7 @@ public class StudentDashboard extends JFrame {
         statisticalSummaryPanel.setLayout(null);
 
         JTextArea StatisticalSummaryTextArea = new JTextArea();
+        StatisticalSummaryTextArea.setFont(new Font("Modern No. 20", Font.PLAIN, 18));
         StatisticalSummaryTextArea.setBounds(27, 22, 591, 169);
         statisticalSummaryPanel.add(StatisticalSummaryTextArea);
 

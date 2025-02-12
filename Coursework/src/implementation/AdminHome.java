@@ -27,21 +27,6 @@ public class AdminHome extends JFrame {
     private JTable allQuestionsTable;
     private JTable allStudentsTable;
 
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    AdminHome frame = new AdminHome();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
 
     /**
      * Create the frame.

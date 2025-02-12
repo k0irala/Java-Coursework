@@ -26,21 +26,6 @@ public class LoginPageAdmin extends JFrame {
 	private final String adminUser = "gaurav";
 	private final String adminPass = "admin";
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LoginPageAdmin frame = new LoginPageAdmin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.

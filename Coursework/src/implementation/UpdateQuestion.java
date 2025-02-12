@@ -36,23 +36,6 @@ public class UpdateQuestion extends JFrame {
 	private JTextField optionFourField;
 	private JTextField answerField;
 	private JTextField idField;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					UpdateQuestion frame = new UpdateQuestion();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	/**
 	 * Create the frame.
 	 */

@@ -34,22 +34,6 @@ public class AddQuestion extends JFrame {
 	private DatabaseOperations dbOperations;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AddQuestion frame = new AddQuestion();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public AddQuestion() {
