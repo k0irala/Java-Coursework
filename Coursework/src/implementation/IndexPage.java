@@ -47,7 +47,7 @@ public class IndexPage extends JFrame {
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setBounds(610, 25, 220, 193);
-		btnNewButton.setIcon(new ImageIcon(IndexPage.class.getResource("/imgaes/student.png")));
+		btnNewButton.setIcon(new ImageIcon(IndexPage.class.getResource("/images/student.png")));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
@@ -65,12 +65,12 @@ public class IndexPage extends JFrame {
 			}
 		});
 		btnNewButton_1.setBounds(140, 25, 220, 193);
-		btnNewButton_1.setIcon(new ImageIcon(IndexPage.class.getResource("/imgaes/admin.png")));
+		btnNewButton_1.setIcon(new ImageIcon(IndexPage.class.getResource("/images/admin.png")));
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("");
 		btnNewButton_2.setBounds(815, 555, 121, 72);
-		btnNewButton_2.setIcon(new ImageIcon(IndexPage.class.getResource("/imgaes/exitr.png")));
+		btnNewButton_2.setIcon(new ImageIcon(IndexPage.class.getResource("/images/exitr.png")));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int a =JOptionPane.showConfirmDialog(null, "Do you want to close the application","Select",JOptionPane.YES_NO_OPTION);
@@ -83,12 +83,12 @@ public class IndexPage extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(10, 0, 956, 669);
-		lblNewLabel.setIcon(new ImageIcon(IndexPage.class.getResource("/imgaes/Quizz.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(IndexPage.class.getResource("/images/Quizz.jpg")));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(0, 0, 966, 680);
-		lblNewLabel_1.setIcon(new ImageIcon(IndexPage.class.getResource("/imgaes/Quizz.jpg")));
+		lblNewLabel_1.setIcon(new ImageIcon(IndexPage.class.getResource("/images/Quizz.jpg")));
 		contentPane.add(lblNewLabel_1);
 	}
 }
