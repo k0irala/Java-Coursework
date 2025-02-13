@@ -1,12 +1,10 @@
-package implementation;
-
-import java.awt.EventQueue;
+package com.herald.implementation;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import connections.IConnectionString;
+import com.herald.connections.IConnectionString;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

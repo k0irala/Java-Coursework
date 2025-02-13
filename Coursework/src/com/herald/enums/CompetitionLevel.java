@@ -1,4 +1,4 @@
-package enums;
+package com.herald.enums;
 
 public enum CompetitionLevel {
 	BEGINNER,

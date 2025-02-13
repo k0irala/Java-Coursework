@@ -1,4 +1,4 @@
-package connections;
+package com.herald.connections;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,10 +1,10 @@
-package implementation;
+package com.herald.implementation;
 
 import java.sql.*;
 
 import javax.swing.JOptionPane;
 
-import connections.IConnectionString;
+import com.herald.connections.IConnectionString;
 
 public class DatabaseOperations {
 	public int AddQuestion(int id, String question, String firstOption, String secondOption, String thirdOption,

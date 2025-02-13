@@ -1,13 +1,13 @@
-package implementation;
+package com.herald.implementation;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.util.HashMap;
 import java.util.Map;
-import connections.IConnectionString;
-import enums.CompetitionLevel;
-import models.Competitor;
+import com.herald.connections.IConnectionString;
+import com.herald.enums.CompetitionLevel;
+import com.herald.models.Competitor;
 import net.proteanit.sql.DbUtils;
 
 import java.sql.*;

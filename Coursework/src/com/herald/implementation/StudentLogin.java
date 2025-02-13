@@ -1,13 +1,12 @@
-package implementation;
+package com.herald.implementation;
 
 import java.sql.*;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import connections.IConnectionString;
+import com.herald.connections.IConnectionString;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -20,8 +19,6 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JCheckBox;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class StudentLogin extends JFrame {
 
@@ -38,7 +35,7 @@ public class StudentLogin extends JFrame {
 		setBounds(100, 100, 500, 453);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		setResizable(false);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 

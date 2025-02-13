@@ -1,4 +1,4 @@
-package models;
+package com.herald.models;
 
 public class Name {
 	private String firstName;

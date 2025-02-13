@@ -1,8 +1,8 @@
-package implementation;
+package com.herald.implementation;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import connections.IConnectionString;
+import com.herald.connections.IConnectionString;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

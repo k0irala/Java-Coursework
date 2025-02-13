@@ -1,9 +1,7 @@
-package implementation;
+package com.herald.implementation;
 
-import connections.IConnectionString;
+import com.herald.connections.IConnectionString;
 import net.proteanit.sql.DbUtils;
-
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
